@@ -8,4 +8,8 @@ describe('Fixnum#ping') do
   it ('replaces numbers divisible by 3 with "ping"') do
     expect((3).ping).to(eq([1, 2, 'ping']))
   end
+
+  it ('replaces numbers divisible by 5 with "pong"') do
+    expect((5).ping).to(eq([1, 2, 'ping', 4, 'pong']))
+  end
 end
