@@ -1,9 +1,17 @@
 class Fixnum
   define_method(:ping) do
     counts = []
-    self.times() do |num|      
+    ponged = []
+    self.times() do |num|
       counts.push(num+1)
     end
-    counts
+    counts.each() do |count|
+      if count.%(3) == 0
+        ponged.push('ping')
+      else
+        ponged.push(count)
+      end
+    end
+    ponged
   end
 end
