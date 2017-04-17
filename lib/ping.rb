@@ -6,7 +6,9 @@ class Fixnum
       counts.push(num+1)
     end
     counts.each() do |count|
-      if count%5 == 0
+      if count.%(15) == 0
+        ponged.push('ping-pong')
+      elsif count.%(5) == 0
         ponged.push('pong')
       elsif count.%(3) == 0
         ponged.push('ping')

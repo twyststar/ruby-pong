@@ -10,6 +10,10 @@ describe('Fixnum#ping') do
   end
 
   it ('replaces numbers divisible by 5 with "pong"') do
-    expect((5).ping).to(eq([1, 2, 'ping', 4, 'pong']))
+    expect((6).ping).to(eq([1, 2, 'ping', 4, 'pong', 'ping']))
+  end
+
+  it ('replaces numbers divisible by 15 with "pong"') do
+    expect((15).ping).to(eq([1, 2, 'ping', 4, 'pong', 'ping', 7, 8, 'ping', 'pong', 11, 'ping', 13, 14, 'ping-pong']))
   end
 end
